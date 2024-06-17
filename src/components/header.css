@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    background-color: #f4f2ee;
+}
+
+.header {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: 0px 1px 1px lightgray;
+    padding: 30px;
+}
+
+.header .link {
+    text-decoration: none;
+}
+
+.header .header-card {
+    width: 200px;
+    height: 300px;
+    border-radius: 5px;
+    border: 0.5px solid lightgray;
+    box-shadow: 2px 2px 4px lightgray, -2px -2px 4px whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.header .header-card:hover {
+    background-color: #0a9787;
+    color: white;
+}

@@ -1,0 +1,54 @@
+.folder-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.folder-container .folder-header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    border-bottom: 0.5px solid lightgray;
+    box-shadow: 0px 2px 2px lightgray;
+}
+
+.folder-container .folder-tree {
+    margin-top: 1rem;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 0 0 2rem;
+}
+
+.folder-tree .collapsed,
+.folder-tree .expanded {
+    width: 0;
+    height: 0;
+}
+
+.folder-tree .collapsed {
+    border-left: 10px solid green;
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+.folder-tree .expanded {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid red;
+}
+
+.folder-name {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+}
+
+.margin-left-class {
+    margin-left: 5px;
+}

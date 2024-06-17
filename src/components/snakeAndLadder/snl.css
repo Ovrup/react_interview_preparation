@@ -1,0 +1,80 @@
+.container-snl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100vw;
+    padding: 10px;
+}
+
+.game-board-snl {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, 80px);
+    justify-content: center;
+}
+
+.cell-snl {
+    border: 1px solid black;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    transition: all 200ms;
+}
+
+.dice {
+    color: white;
+    width: 180px;
+    height: 60px;
+    background-color: #28a745;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.player1,
+.player2 {
+    border-radius: 3px;
+    padding: 5px;
+    color: white;
+    transition: all 200ms;
+    padding: 8px;
+}
+
+.player1,
+.cell-snl.player1 {
+    background-color: #017bfe;
+}
+
+.player2,
+.cell-snl.player2 {
+    background-color: #28a745;
+}
+
+.cell-snl.player1,
+.cell-snl.player2 {
+    border-radius: 0px;
+}
+
+.player1.highlight,
+.player2.highlight {
+    background-color: #ffc007;
+    transform: scale(1.2);
+    color: black;
+}
+
+.bg-danger {
+    background-color: #CDF5FD;
+}

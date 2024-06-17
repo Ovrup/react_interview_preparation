@@ -1,0 +1,133 @@
+:root {
+    --cell-size: 100px;
+    --mark-size: calc(var(--cell-size) * 0.9);
+}
+
+.tic-tac-toe {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, var(--cell-size));
+    grid-template-rows: repeat(3, var(--cell-size));
+}
+
+.container .cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.container .cell:nth-child(3n+1) {
+    border-left: none;
+}
+
+.container .cell:nth-child(3n) {
+    border-right: none;
+}
+
+.container .cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: none;
+}
+
+.container .cell:last-child,
+.cell:nth-child(8),
+.cell:nth-child(7) {
+    border-bottom: none;
+}
+
+.container .cell.x::before,
+.cell.x::after,
+.container.x .cell:not(.x):not(.circle):hover::before,
+.container.x .cell:not(.x):not(.circle):hover::after {
+    content: "";
+    width: calc(var(--mark-size) * 0.15);
+    height: var(--mark-size);
+    background-color: black;
+    position: absolute;
+}
+
+.container .cell.x::before,
+.container.x .cell:not(.x):not(.circle):hover::before {
+    transform: rotate(45deg);
+}
+
+.container .cell.x::after,
+.container.x .cell:not(.x):not(.circle):hover::after {
+    transform: rotate(-45deg);
+}
+
+.container.x .cell:not(.x):not(.circle):hover::before,
+.container.x .cell:not(.x):not(.circle):hover::after {
+    background-color: gray;
+}
+
+.container .cell.circle::before,
+.cell.circle::after,
+.container.circle .cell:not(.x):not(.circle):hover::before,
+.container.circle .cell:not(.x):not(.circle):hover::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.container .cell.circle::before,
+.container.circle .cell:not(.x):not(.circle):hover::before {
+    width: calc(var(--mark-size));
+    height: calc(var(--mark-size));
+}
+
+.container .cell.circle::after,
+.container.circle .cell:not(.x):not(.circle):hover::after {
+    background-color: white;
+    width: calc(var(--mark-size) * 0.7);
+    height: calc(var(--mark-size) * 0.7);
+}
+
+.container.circle .cell:not(.x):not(.circle):hover::before {
+    background-color: gray;
+}
+
+.winning-message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: rgba(20, 20, 20, 0.7);
+}
+
+.message {
+    font-size: 80px;
+    color: white;
+    font-weight: 700;
+}
+
+.start-game-button {
+    background-color: white;
+    color: black;
+    font-size: 40px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}

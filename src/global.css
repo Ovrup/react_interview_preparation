@@ -1,0 +1,26 @@
+.button-success,
+.button-danger {
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.button-success {
+    background-color: #0a9787;
+}
+
+.button-danger {
+    background-color: #e5455d;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.input {
+    width: 300px;
+    padding: 10px;
+}

@@ -1,0 +1,68 @@
+body {
+    font-size: 18px;
+    box-sizing: content-box;
+}
+
+.table-container {
+    width: 100vw;
+    padding: 0px 20px;
+}
+
+input {
+    margin: 20px;
+    padding: 10px;
+    width: 500px;
+}
+
+.table-container table {
+    width: 100%;
+}
+
+.table-container table,
+th,
+tr {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.table-container table th,
+tr {
+    width: 100%;
+}
+
+table td {
+    padding: 10px;
+    border-right: 1px solid gray;
+}
+
+table thead td {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.pagination-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 20px;
+}
+
+.pagination-container .page-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 40px;
+    background-color: #ebebeb;
+    color: black;
+    border: 1px solid darkgray;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.pagination-container .page-box.active {
+    background-color: #ff4141;
+    color: white;
+}
