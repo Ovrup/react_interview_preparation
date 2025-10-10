@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import CenteredComponent from '../../utility/center-component/centeredComponent';
 
 export default function OutsideClickHandler({ children, onOutsideClick }) {

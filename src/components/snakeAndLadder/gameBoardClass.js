@@ -63,7 +63,7 @@ class Row {
                 this.row.push(new Cell(i, false, false));
             }
         } else {
-            for (let i = start; i >= end + 1; i--) {
+            for (let i = start; i > end; i--) {
                 this.row.push(new Cell(i, false, false));
             }
         }

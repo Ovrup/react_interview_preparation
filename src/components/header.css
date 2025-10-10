@@ -13,14 +13,18 @@ body {
     background-color: #fff;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    gap: 30px;
     box-shadow: 0px 1px 1px lightgray;
     padding: 30px;
 }
 
 .header .link {
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .header .header-card {
@@ -33,6 +37,7 @@ body {
     align-items: center;
     justify-content: center;
     color: black;
+    text-align: center;
 }
 
 .header .header-card:hover {

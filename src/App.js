@@ -14,6 +14,9 @@ import UserList from "./components/apiResponse/UserData";
 import TicTacToeGame from "./components/games/tictacToeGame/TicTacToeGame";
 import CardGame from "./components/games/CardGame/CardGame";
 import SnakeAndLadder from "./components/snakeAndLadder/snakeAndLadder";
+import Splitwise from "./components/splitwise/splitwise";
+import ProtectedRoute from "./components/splitwise/ProtectedRoute";
+import Login from "./components/splitwise/login";
 // import { initWorker } from "./worker";
 
 export const WorkerContext = React.createContext()
@@ -36,6 +39,8 @@ function App() {
         <Route path='/users' element={<UserList />} />
         <Route path='/card-game' element={<CardGame />} />
         <Route path='/snl' element={<SnakeAndLadder gridSize={[10, 10]} />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/splitwise' element={<ProtectedRoute component={<Splitwise />} />} />
       </Routes>
 
     </Router>

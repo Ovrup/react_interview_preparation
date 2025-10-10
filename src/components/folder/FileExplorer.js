@@ -16,7 +16,7 @@ export default function FileExplorer({ file }) {
             <h3>{file.name}</h3>
         </div>
         {file.subFolder.map((subFile) => {
-            return showSubFolder ? <div style={{ paddingLeft: "25px" }}><FileExplorer file={subFile} /></div> : ""
+            return showSubFolder ? <div key={subFile.id} style={{ paddingLeft: "25px" }}><FileExplorer file={subFile} /></div> : ""
         })}
     </>
 

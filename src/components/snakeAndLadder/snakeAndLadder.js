@@ -21,7 +21,6 @@ const SnakeAndLadder = ({ gridSize }) => {
 
     function checkWin(diceNumber) {
         const finalPosition = diceNumber + (isPlayer1Turn ? player1 : player2);
-        console.log("finalPosition", finalPosition);
         if (finalPosition === 100) {
             return true;
         } else {

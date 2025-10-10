@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useMemo } from 'react';
+import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './detectClick.css';
 import { useOutsideClick } from './useOutsideClick';
@@ -21,14 +21,13 @@ export default function DetectClick() {
 
 
     function handleOutsideClick() {
-
+        let id = createId.next().value;
+        const newToast = {
+            id: id,
+            title: `Outside Clicked ${id}`,
+        }
 
         setToast((prev) => {
-            let id = createId.next().value;
-            const newToast = {
-                id: id,
-                title: `Outside Clicked ${id}`,
-            }
             return [...prev, newToast]
         });
     }
@@ -39,7 +38,15 @@ export default function DetectClick() {
 
     return (
         <div className='main-container'>
-            <button onClick={() => navigate(-1)} className='button-success'>Back</button>
+            <button
+                onClick={(e) => {
+                    e.stopPropagation();
+                    navigate(-1)
+                }}
+                className='button-success'
+            >
+                Back
+            </button>
             <div ref={outsideClickRef} className='container-box'>Detect Outside Click</div>
             <ToastList toast={toast} closeToast={closeToast} />
         </div>

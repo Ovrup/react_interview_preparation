@@ -22,7 +22,9 @@ export default function Dashboard() {
                 </div>
             </div>
             <OutsideClickHandler onOutsideClick={() => setIsOpen(false)}>
-                <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} />
+                <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+                    Full Screen Modal
+                </Modal>
             </OutsideClickHandler>
         </div>
     )

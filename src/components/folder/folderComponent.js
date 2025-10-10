@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { files } from './data';
 import FileExplorer from './FileExplorer';

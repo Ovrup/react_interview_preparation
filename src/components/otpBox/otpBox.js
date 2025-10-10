@@ -46,18 +46,13 @@ export default function OtpBox() {
         }
     }
 
-    function showData() {
-        console.log("This is Test console");
-        return <div>This is Test</div>
-    }
-
     return (
         <div>
             <label className='toggle-box'>
                 <input type='checkbox' id='toggle-checkbox' />
                 <span className='toggle-button'></span>
             </label>
-            <div style={{ display: "none" }}>{showData()}</div>
+
             <CenteredComponent>
                 {otpInput.map((val, idx) => {
                     return <input

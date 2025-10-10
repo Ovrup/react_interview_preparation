@@ -8,7 +8,7 @@ const TableHead = ({ columns, sortTableData }) => {
         <thead>
             <tr>
                 {columns.map((col) => {
-                    return <td onClick={() => sortTableData(col.accesor, sortType === "asc" ? "desc" : "asc")}>{col.label}</td>
+                    return <th key={col.accesor} onClick={() => sortTableData(col.accesor, sortType === "asc" ? "desc" : "asc")}>{col.label}</th>
                 })}
             </tr>
         </thead>

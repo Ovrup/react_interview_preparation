@@ -49,6 +49,10 @@ export default function Header() {
                 <h2>Snake & Ladder</h2>
             </div>
             </Link>
+            <Link className='link' to='/splitwise'><div className='header-card'>
+                <h2>Spliwise</h2>
+            </div>
+            </Link>
         </div >
     )
 }
