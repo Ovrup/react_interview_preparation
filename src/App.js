@@ -18,6 +18,7 @@ import Splitwise from "./components/splitwise/splitwise";
 import ProtectedRoute from "./components/splitwise/ProtectedRoute";
 import Login from "./components/splitwise/login";
 // import { initWorker } from "./worker";
+import ImageGallery from "./components/imageGallery";
 
 export const WorkerContext = React.createContext()
 
@@ -41,6 +42,7 @@ function App() {
         <Route path='/snl' element={<SnakeAndLadder gridSize={[10, 10]} />} />
         <Route path='/login' element={<Login />} />
         <Route path='/splitwise' element={<ProtectedRoute component={<Splitwise />} />} />
+        <Route path='/image-gallery' element={<ImageGallery />} />
       </Routes>
 
     </Router>
