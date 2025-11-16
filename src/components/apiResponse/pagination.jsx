@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const Pagination = ({ filteredUsers }) => {
-    const pageSize = 5;
+    const pageSize = 10;
     const pageCount = Math.ceil(filteredUsers.length / pageSize);
     const [selectedPage, setSelectedPage] = useState(0);
 

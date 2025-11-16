@@ -27,7 +27,7 @@ tr {
 
 .table-container table th,
 tr {
-    width: 100%;
+    /* width: 100%; */
 }
 
 table td {

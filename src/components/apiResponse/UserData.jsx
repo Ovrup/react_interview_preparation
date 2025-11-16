@@ -9,7 +9,7 @@ const UserList = () => {
     }, []);
 
     const getUserData = async () => {
-        let res = await fetch("https://dummyjson.com/users");
+        let res = await fetch("https://dummyjson.com/users?limit=0");
         let data = await res.json();
 
         data.users = data.users.map((user) => {
